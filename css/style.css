@@ -1,0 +1,106 @@
+h1 {
+  text-align: center;
+  text-shadow: 3px 3px 5px #888888;
+}
+
+#wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+table {
+  caption-side: bottom;
+  empty-cells: show;
+  border: 1px solid grey;
+  caption-side: top;
+  overflow: hidden;
+  border-collapse: collapse;
+  width: 80%;
+  min-width: 600px;
+  max-width: 1500px;
+}
+
+td {
+  font-weight: bold;
+  vertical-align: top;
+  text-align: center;
+}
+/*
+tr {
+  background-color: #e4e4e4;
+}
+*/
+
+th {
+  background-color: #34f;
+}
+
+* {
+  padding: 1rem;
+  margin: 1rem
+}
+
+.hoverTable th {
+  position: relative;
+}
+
+.hoverTable td {
+  padding: 7px;
+  border: #4e95f4 1px solid;
+}
+/*.hoverTable tr {
+  background: #b8d1f3;
+}*/
+
+.hoverTable tr:hover {
+  background-color: #9296bf;
+}
+
+tbody td,
+thead th {
+  position: relative;
+}
+
+.hoverTable td:hover::before {
+  background-color: #9296bf;
+  content: "";
+  height: 100%;
+  left: -5000px;
+  position: absolute;
+  top: 0;
+  width: 10000px;
+  z-index: -1;
+}
+
+.hoverTable td:hover::after {
+  background-color: #9296bf;
+  content: "";
+  height: 10000px;
+  left: 0;
+  position: absolute;
+  top: -5000px;
+  width: 100%;
+  z-index: -1;
+}
+
+.hoverTable tr:nth-child(odd) .row::before {
+  content: "";
+  position: absolute;
+  width: 10000px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #eee;
+  z-index: -5;
+}
+
+.hoverTable tr:nth-child(even) .row::before {
+  content: "";
+  position: absolute;
+  width: 10000px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #c4ebed;
+  z-index: -5;
+}
